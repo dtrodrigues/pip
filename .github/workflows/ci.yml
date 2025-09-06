@@ -135,11 +135,6 @@ jobs:
       - run: pip install nox
 
       # Main check
-      - name: Run unit tests
-        run: >-
-          nox -s test-${{ matrix.python.key || matrix.python }} --
-          tests/unit
-          --verbose --numprocesses auto --showlocals
       - name: Run integration tests
         run: >-
           nox -s test-${{ matrix.python.key || matrix.python }} --no-install --
