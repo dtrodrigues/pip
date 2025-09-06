@@ -23,6 +23,11 @@ def patch_check_externally_managed(virtualenv: VirtualEnvironment) -> None:
 
         misc.check_externally_managed = check_externally_managed
         """
+    virtualenv.sitecustomize += textwrap.dedent(
+        """
+        import pip._internal.commands.install
+        pip._internal.commands.install.user_site_is_enabled = lambda: True
+        """
     )
 
 
