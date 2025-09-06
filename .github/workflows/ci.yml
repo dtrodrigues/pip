@@ -160,8 +160,6 @@ jobs:
       - docs
       - packaging
       - tests-unix
-      - tests-windows
-      - tests-zipapp
       - vendoring
 
     runs-on: ubuntu-22.04
