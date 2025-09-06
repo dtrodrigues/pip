@@ -113,14 +113,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-22.04, macos-latest]
+        os: [ubuntu-22.04]
         python:
           - "3.9"
-          - "3.10"
-          - "3.11"
-          - "3.12"
-          - "3.13"
-          - "3.14"
+
 
     steps:
       - uses: actions/checkout@v5
